@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Settings">
+
+<!--        <ListPreference-->
+<!--            android:defaultValue="English"-->
+<!--            android:icon="@drawable/ic_language_settings"-->
+<!--            android:key="languageSettings"-->
+<!--            android:title="Language" />-->
+
+<!--        <ListPreference-->
+<!--            android:icon="@drawable/ic_pallet_settings"-->
+<!--            android:key="themes"-->
+<!--            android:title="Theme" />-->
+
+
+        <com.example.expensesManager.CustomDialogPreference
+            android:key="currency"
+            android:title="Default Currency"
+            android:icon="@drawable/ic_currency_settings"
+            android:entries="@array/currencyEntries"
+            app:entryValues="@array/currencyValues">
+
+        </com.example.expensesManager.CustomDialogPreference>
+
+
+
+
+    </PreferenceCategory>
+</PreferenceScreen>
+
+

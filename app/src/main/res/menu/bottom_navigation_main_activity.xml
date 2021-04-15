@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/creditCardCredentials"
+        android:icon="@drawable/ic_credit_card"
+        android:title="Accounts" />
+
+    <item
+        android:id="@+id/expensesTab"
+        android:icon="@drawable/ic_pie_chart"
+        android:title="Categories" />
+
+    <item
+        android:id="@+id/Transactions"
+        android:icon="@drawable/ic_transactions"
+        android:title="Transactions" />
+
+    <item
+        android:id="@+id/Budget"
+        android:icon="@drawable/ic_budget"
+        android:title="Budget" />
+
+    <item
+        android:id="@+id/overview"
+        android:icon="@drawable/ic_overview"
+        android:title="Overview" />
+
+
+</menu>
