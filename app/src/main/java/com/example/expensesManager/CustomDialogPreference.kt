@@ -1,31 +1,29 @@
 package com.example.expensesManager
 
-import android.R
-import android.content.Context
-import android.util.AttributeSet
+import android.content.DialogInterface
+import android.os.Bundle
+import androidx.fragment.app.DialogFragment
 import androidx.preference.DialogPreference
+import androidx.preference.DialogPreference.TargetFragment
+import androidx.preference.Preference
+import com.example.expensesManager.MainActivityFragments.SettingsFragment
+import kotlinx.android.synthetic.main.activity_main.*
 
+class CustomDialogPreference: DialogInterface.OnClickListener, DialogFragment() {
 
-class CustomDialogPreference(context: Context?, attrs: AttributeSet?) :
-    DialogPreference(context, attrs) {
+    private lateinit var preference : Preference
 
-     fun onDialogClosed(positiveResult: Boolean) {
-        // When the user selects "OK", persist the new value
-        if (positiveResult) {
-            // User selected OK
-        } else {
-            // User selected Cancel
-        }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val settingsFragment : SettingsFragment = SettingsFragment.newInstance()
+        val fragment = settingsFragment as TargetFragment
     }
 
 
 
-    init {
 
-
-        dialogLayoutResource = R.layout.select_dialog_item
-        setPositiveButtonText(R.string.ok)
-        setNegativeButtonText(R.string.cancel)
-        dialogIcon = null
+    override fun onClick(dialog: DialogInterface?, which: Int) {
+        TODO("Not yet implemented")
     }
 }

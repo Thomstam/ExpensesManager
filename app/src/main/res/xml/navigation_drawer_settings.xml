@@ -1,32 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="Settings">
 
-<!--        <ListPreference-->
-<!--            android:defaultValue="English"-->
-<!--            android:icon="@drawable/ic_language_settings"-->
-<!--            android:key="languageSettings"-->
-<!--            android:title="Language" />-->
+        <ListPreference
+            android:defaultValue="English"
+            android:icon="@drawable/ic_language_settings"
+            android:key="languageSettings"
+            android:summary="English"
+            android:title="Language" />
 
-<!--        <ListPreference-->
-<!--            android:icon="@drawable/ic_pallet_settings"-->
-<!--            android:key="themes"-->
-<!--            android:title="Theme" />-->
+        <ListPreference
+            android:icon="@drawable/ic_pallet_settings"
+            android:key="themes"
+            android:summary="Light"
+            android:title="Theme" />
 
-
-        <com.example.expensesManager.CustomDialogPreference
-            android:key="currency"
-            android:title="Default Currency"
+        <ListPreference
             android:icon="@drawable/ic_currency_settings"
-            android:entries="@array/currencyEntries"
-            app:entryValues="@array/currencyValues">
+            android:key="currencyChoice"
+            android:summary="Euro - €"
+            android:title="Default Currency" />
 
-        </com.example.expensesManager.CustomDialogPreference>
+        <ListPreference
+            android:icon="@drawable/settings_fragment_calendar"
+            android:key="firstDayOfWeek"
+            android:summary="Monday"
+            android:title="First day of week" />
 
+        <ListPreference
+            android:icon="@drawable/settings_fragment_open_screen"
+            android:key="startScreen"
+            android:summary="Categories"
+            android:title="Startup Screen" />
 
+        <SwitchPreference
+            android:defaultValue="true"
+            android:icon="@drawable/settings_fragment_notification"
+            android:key="notification"
+            android:summary="20:00"
+            android:title="Notifications" />
 
+        <SwitchPreference
+            android:defaultValue="true"
+            android:icon="@drawable/setting_fragment_fingerprint"
+            android:key="fingerprint"
+            android:title="Fingerprint" />
 
+        <SwitchPreference
+            android:key="budgetChoice"
+            android:title="Budget"
+            android:icon="@drawable/ic_budget"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Data">
+
+        <Preference
+            android:key="saveToCSV"
+            android:title="Export data To CSV"
+            android:icon="@drawable/settings_fragment_export_to_csv"/>
+
+        <Preference
+            android:key="nukeDatabases"
+            android:title="Delete ALL data"
+            android:icon="@drawable/settings_fragment_delete_all"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="About">
+
+        <Preference
+            android:key="version"
+            android:title="0.0.1"
+            android:icon="@drawable/settings_fragment_information"/>
     </PreferenceCategory>
 </PreferenceScreen>
 

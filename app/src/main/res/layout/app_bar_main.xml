@@ -9,17 +9,19 @@
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarMain"
+            android:id="@+id/mainToolBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/orange" />
+            android:background="@color/orange" >
+
+            <Spinner
+                android:id="@+id/AccountsSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity= "center_horizontal"
+                android:spinnerMode="dropdown"
+                />
+        </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerMain"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/appBarMain" />
-
 </RelativeLayout>

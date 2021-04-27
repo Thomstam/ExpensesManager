@@ -3,18 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include layout="@layout/navigation_drawer_with_settings"/>
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.drawerlayout.widget.DrawerLayout
-            android:id="@+id/drawerAccountFragment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-
-        </androidx.drawerlayout.widget.DrawerLayout>
-    </androidx.appcompat.widget.Toolbar>
 
 </RelativeLayout>
